@@ -34,6 +34,7 @@ import { ProjectCarousel } from '@/components/organisms/ProjectCarousel/ProjectC
 import { BiodiversityIndex } from '@/components/organisms/BiodiversityIndex/BiodiversityIndex';
 import { ForestCoverageTracker } from '@/components/organisms/ForestCoverageTracker/ForestCoverageTracker';
 import { ProjectPlanters } from '@/components/organisms/ProjectPlanters';
+import { SoilHealthSection } from '@/components/organisms/ProjectDetailView/SoilHealthSection';
 import { FundAllocationTransparency } from '@/components/organisms/FundAllocationTransparency';
 import { NativeSpeciesTransparency } from '@/components/organisms/NativeSpeciesTransparency';
 import dynamic from 'next/dynamic';
@@ -238,6 +239,8 @@ export function ProjectDetailView({
                 <ForestCoverageTracker coverage={coverage} />
               </section>
             )}
+
+            <SoilHealthSection projectId={adminProject.id} />
 
             <section id="about">
               <Text variant="h3" className="mb-6 font-bold flex items-center gap-2">
