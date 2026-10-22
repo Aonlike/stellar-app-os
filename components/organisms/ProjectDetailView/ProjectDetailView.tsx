@@ -34,6 +34,7 @@ import { ProjectCarousel } from '@/components/organisms/ProjectCarousel/ProjectC
 import { DroneImageryViewer } from '@/components/organisms/DroneImageryViewer/DroneImageryViewer';
 import { BiodiversityIndex } from '@/components/organisms/BiodiversityIndex/BiodiversityIndex';
 import { ProjectPlanters } from '@/components/organisms/ProjectPlanters';
+import { SoilHealthSection } from '@/components/organisms/ProjectDetailView/SoilHealthSection';
 import { FundAllocationTransparency } from '@/components/organisms/FundAllocationTransparency';
 import { NativeSpeciesTransparency } from '@/components/organisms/NativeSpeciesTransparency';
 import { ProjectProtectionImpact } from '@/components/organisms/SponsorImpact/ProjectProtectionImpact';
@@ -215,6 +216,7 @@ export function ProjectDetailView({ adminProject, carbonProject }: ProjectDetail
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Main Content */}
           <div className="flex-1 space-y-12">
+            <SoilHealthSection projectId={adminProject.id} />
             <section id="about">
               <Text variant="h3" className="mb-6 font-bold flex items-center gap-2">
                 About the Project
